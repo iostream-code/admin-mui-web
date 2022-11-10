@@ -4,6 +4,7 @@ import { PublicRoute, PrivateRoute } from './routes/Routes'
 import './App.css';
 import Login from "./pages/login/Login"
 import Dashboard from "./pages/dashboard/Dashboard";
+import Clients from "./pages/clients/Client";
 
 function App() {
   return (
@@ -23,6 +24,14 @@ function App() {
             element={
               <PrivateRoute>
                 <Dashboard />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path='/client'
+            element={
+              <PrivateRoute>
+                <Clients />
               </PrivateRoute>
             }
           />
