@@ -47,11 +47,11 @@ export default function Navigator(props) {
 
     const handleLogout = () => {
         localStorage.removeItem('token');
-        navigate('/login');
+        navigate('/');
     }
 
     const handleAnalitycs = () => {
-        navigate('/');
+        navigate('/analitycs');
     }
 
     return (

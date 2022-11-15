@@ -5,6 +5,7 @@ import './App.css';
 import Login from "./pages/login/Login"
 import Dashboard from "./pages/dashboard/Dashboard";
 import Clients from "./pages/clients/Client";
+import Form from "./pages/components/Form";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/login"
+            path="/"
             element={
               <PublicRoute>
                 <Login />
@@ -32,6 +33,14 @@ function App() {
             element={
               <PrivateRoute>
                 <Clients />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path='/form'
+            element={
+              <PrivateRoute>
+                <Form />
               </PrivateRoute>
             }
           />
